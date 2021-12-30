@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { InputValueProvider } from './context/InputValueContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <InputValueProvider>
+      <App headerText="This is a header." extraText='Some extra text.'/>
+    </InputValueProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
